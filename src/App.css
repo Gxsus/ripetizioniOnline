@@ -1,0 +1,42 @@
+#root {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 5vh;
+    gap: 15vw;
+    justify-content: center;
+    background-color: #272a2e; 
+}
+
+#navbar a { 
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+#navbar a:hover { 
+    color: #393e46; 
+}
+
+.content {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+#cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    overflow: auto;
+}
