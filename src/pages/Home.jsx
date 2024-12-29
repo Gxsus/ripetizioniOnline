@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar"
 import Accordion from 'react-bootstrap/Accordion';
 
 function Home() {
-    
+
     return (
         <>
             <Navbar></Navbar>
