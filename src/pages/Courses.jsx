@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
@@ -76,7 +76,7 @@ function Courses() {
     return (
         <>
             <Navbar />
-            <div className="content">
+            <div className="container main-content" style={{ position: 'relative' }}>
                 <h1>Corsi in vendita</h1>
                 <p>Ogni corso ha il prezzo specificato.</p>
                 <div id="cards-container">

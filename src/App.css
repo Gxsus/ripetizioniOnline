@@ -1,69 +1,47 @@
-#root {
-    margin: 0 auto;
-    text-align: center;
-}
-
-#navbar {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 7vh;
-    gap: 10vw;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(26, 26, 26);
-}
-
-#navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 3vh;
-    margin: 0 10px;
-}
-
-#navbar a:hover {
-    color: #393e46;
-}
-
-#navbar a.active {
-    font-weight: 1000;
-}
-
-@media (max-width: 768px) {
-    #navbar {
-        flex-direction: column;
-        height: auto;
-        gap: 2vh;
-    }
-
-    #navbar a {
-        font-size: 2.5vh;
-        margin: 5px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    #navbar {
-        gap: 1vh;
-    }
-
-    #navbar a {
-        font-size: 2vh;
-        margin: 3px 0;
-    }
+.burger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
 }
 
 .content {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 92vh;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 80vw;
-    height: 93vh;
-    overflow: auto;
     margin-left: 10%;
     margin-right: 10%;
+    overflow: auto;
+    text-align: center;
+    width: 80vw;
+}
+
+.main-content {
+    height: calc(100vh - 10vh); /* Altezza totale meno l'altezza della navbar */
+    overflow-y: auto; /* Abilita lo scorrimento verticale */
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu a {
+    margin: 0 10px; /* Aggiungi margine tra i link */
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu a.active {
+    font-weight: bold;
+}
+
+.menu.open {
+    display: flex;
 }
 
 table {
@@ -71,14 +49,84 @@ table {
 }
 
 table th, table td {
-    width: 33.33%;
     text-align: center;
+    width: 33.33%;
 }
 
 #cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     height: 50vh;
     overflow: auto;
+}
+
+#navbar {
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    flex-direction: row;
+    gap: 2vw; /* Riduci il gap tra gli elementi */
+    height: 10vh; /* Aumenta l'altezza della navbar */
+    justify-content: left;
+    position: relative;
+    width: 100vw;
+}
+
+#navbar a {
+    color: white;
+    font-size: 2.5vh; /* Riduci la dimensione del font */
+    margin: 0 15px; /* Aumenta il margine tra i link */
+    text-decoration: none;
+}
+
+#navbar a.active {
+    font-weight: 1000;
+}
+
+#navbar a:hover {
+    color: #393e46;
+}
+
+#root {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    #navbar {
+        gap: 1vh;
+    }
+
+    #navbar a, .menu a {
+        font-size: 3vh; /* Aumenta la dimensione del font */
+        margin: 5px 0; /* Aumenta il margine */
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        gap: 2vh;
+        height: auto;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    #navbar a, .menu a {
+        font-size: 2.5vh;
+        margin: 5px 0;
+    }
 }

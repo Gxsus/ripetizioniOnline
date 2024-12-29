@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useParams } from 'react-router-dom';
@@ -80,11 +80,11 @@ function Courses() {
     return (
         <>
             <Navbar />
-            <div className="content">
+            <div className="container main-content" style={{ position: 'relative' }}>
                 <h1>{card.title}</h1>
                 <p>{card.text}</p>
                 <Button variant="primary" size="lg">
-                Prendi per soli {card.footer}
+                    Prendi per soli {card.footer}
                 </Button>
             </div>
         </>

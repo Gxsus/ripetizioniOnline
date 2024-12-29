@@ -6,10 +6,10 @@ function About() {
     return (
         <>
             <Navbar />
-            <div className="content">
+            <div className="container main-content" style={{ position: 'relative' }}>
                 <h1>Informazioni</h1>
                 <p>Le ripetizioni si svolgeranno in presenza oppure online tramite un server Discord.</p>
-                <Table striped bordered hover variant="dark" style={{ width: "75vw" }}>
+                <Table striped bordered hover variant="dark" className="w-100">
                     <thead>
                         <tr>
                             <th>Ripetizioni</th>

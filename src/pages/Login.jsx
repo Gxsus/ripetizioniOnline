@@ -62,7 +62,7 @@ function Login() {
     return (
         <>
             <Navbar />
-            <div className="content">
+            <div className="container main-content" style={{ position: 'relative' }}>
                 <h1 style={{ paddingBottom: "5vh" }}>Login</h1>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -94,7 +94,7 @@ function Login() {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox" style={{ paddingBottom: "2vh" }}>
-                        <Form.Check type="checkbox" label={passwordChecker} />
+                        <Form.Check type="checkbox" label={passwordChecker} onClick={changePasswordState} />
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Submit
