@@ -12,8 +12,13 @@ function Login() {
     const [passwordChecker, setPasswordChecker] = useState('Show Password');
     const [emailError, setEmailError] = useState('');
 
-    const sendLoginData = () => {
-        
+    const sendLoginData = async () => {
+        try {
+            const response = await AuthenticationService.login(formData.email, formData.password);
+            console.log(response);
+        } catch (error) {
+            console.error("Login failed", error);
+        }
     }
 
     const validateEmail = (email) => {
@@ -51,7 +56,7 @@ function Login() {
             setEmailError('Invalid email address');
             return;
         }
-        // Handle form submission
+        sendLoginData();
     };
 
     return (
@@ -88,7 +93,7 @@ function Login() {
                             onChange={handleInputChange}
                         />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox" onClick={changePasswordState} style={{ paddingBottom: "2vh" }}>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox" style={{ paddingBottom: "2vh" }}>
                         <Form.Check type="checkbox" label={passwordChecker} />
                     </Form.Group>
                     <Button variant="primary" type="submit">

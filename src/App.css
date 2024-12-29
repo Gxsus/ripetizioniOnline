@@ -25,6 +25,10 @@
     color: #393e46;
 }
 
+#navbar a.active {
+    font-weight: 1000;
+}
+
 @media (max-width: 768px) {
     #navbar {
         flex-direction: column;
@@ -60,6 +64,15 @@
     overflow: auto;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+table {
+    width: 100%;
+}
+
+table th, table td {
+    width: 33.33%;
+    text-align: center;
 }
 
 #cards-container {

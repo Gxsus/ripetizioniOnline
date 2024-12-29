@@ -7,26 +7,26 @@ function About() {
         <>
             <Navbar />
             <div className="content">
-                <h1>About</h1>
-                <p>Le ripetizioni saranno in presenza oppure online (tramite un server discord).</p>
-                <Table striped bordered hover variant="dark">
+                <h1>Informazioni</h1>
+                <p>Le ripetizioni si svolgeranno in presenza oppure online tramite un server Discord.</p>
+                <Table striped bordered hover variant="dark" style={{ width: "75vw" }}>
                     <thead>
                         <tr>
                             <th>Ripetizioni</th>
                             <th>Online</th>
-                            <th>In presenza</th>
+                            <th>In Presenza</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Prezzo (€/h)</td>
+                            <td>Tariffa Oraria</td>
                             <td>15 €</td>
                             <td>20 €</td>
                         </tr>
                         <tr>
-                            <td>Territorio</td>
-                            <td>Qualunque posto</td>
-                            <td>GENOVA (Brignole - Voltri)</td>
+                            <td>Luogo</td>
+                            <td>Nessuna Restrizione</td>
+                            <td>GENOVA (Voltri - Brignole)</td>
                         </tr>
                         <tr>
                             <td>Pagamento anticipato</td>
@@ -40,7 +40,7 @@ function About() {
                         </tr>
                     </tbody>
                 </Table>
-                <p>Per ulteriori informazioni, siete pregati di contattarci (le nostre email sono presenti su <Link to="/contact">contatti</Link>).</p>
+                <p>Per ulteriori informazioni, vi invitiamo a contattarci. Potete trovare i nostri indirizzi email nella sezione <Link to="/contact">Contatti</Link>.</p>
             </div>
         </>
     );
