@@ -25,12 +25,8 @@ function Navbar() {
             <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
                 <Link to='/' className={activeLink === '/' ? 'active' : ''} onClick={() => handleLinkClick('/')}>Home</Link>
                 <Link to='/about' className={activeLink === '/about' ? 'active' : ''} onClick={() => handleLinkClick('/about')}>Informazioni</Link>
-                <Link to='/contact' className={activeLink === '/contact' ? 'active' : ''} onClick={() => handleLinkClick('/contact')}>Contatti</Link>
                 <Link to='/courses' className={activeLink === '/courses' ? 'active' : ''} onClick={() => handleLinkClick('/courses')}>Corsi</Link>
-                {user.isLogged ?
-                    <Link to='/logout' className={activeLink === '/logout' ? 'active' : ''} onClick={() => handleLinkClick('/logout')}>Logout</Link> :
-                    <Link to='/login' className={activeLink === '/login' ? 'active' : ''} onClick={() => handleLinkClick('/login')}>Login</Link>
-                }
+                <Link to='/contact' className={activeLink === '/contact' ? 'active' : ''} onClick={() => handleLinkClick('/contact')}>Contatti</Link>
             </div>
             {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
         </nav>
