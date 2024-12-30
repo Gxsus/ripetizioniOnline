@@ -8,25 +8,25 @@ function About() {
             <Navbar />
             <div className="container main-content" style={{ position: 'relative' }}>
                 <h1>Informazioni</h1>
-                <p>Le ripetizioni si svolgeranno in presenza oppure online tramite un server Discord.</p>
+                <p>Le lezioni di ripetizione si svolgeranno in presenza oppure online tramite un server Discord.</p>
                 <Table striped bordered hover variant="dark" className="w-100">
                     <thead>
                         <tr>
-                            <th>Ripetizioni</th>
+                            <th>Modalità</th>
                             <th>Online</th>
-                            <th>In Presenza</th>
+                            <th>In presenza</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Tariffa Oraria</td>
+                            <td>Tariffa oraria</td>
                             <td>15 €</td>
                             <td>20 €</td>
                         </tr>
                         <tr>
                             <td>Luogo</td>
-                            <td>Nessuna Restrizione</td>
-                            <td>GENOVA (Voltri - Brignole)</td>
+                            <td>Senza restrizioni</td>
+                            <td>Genova (Voltri - Brignole)</td>
                         </tr>
                         <tr>
                             <td>Pagamento anticipato</td>
@@ -34,7 +34,7 @@ function About() {
                             <td>❌</td>
                         </tr>
                         <tr>
-                            <td>Pagare in contanti</td>
+                            <td>Pagamento in contanti</td>
                             <td>❌</td>
                             <td>✔️</td>
                         </tr>

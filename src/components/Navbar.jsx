@@ -10,7 +10,7 @@ function Navbar() {
 
     const handleLinkClick = (path) => {
         setActiveLink(path);
-        setIsMenuOpen(false); // Chiudi il menu quando un link viene cliccato
+        setIsMenuOpen(false);
     };
 
     const toggleMenu = () => {
