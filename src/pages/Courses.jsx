@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from "react-router-dom";
 
 function Courses() {
     let cards = [
@@ -76,13 +75,16 @@ function Courses() {
     return (
         <>
             <Navbar />
+            <div className="banner" style={{ backgroundColor: 'yellow',color: "black", textAlign: 'center', padding: '10px', fontWeight: 'bold' }}>
+                Work in Progress
+            </div>
             <div className="container main-content" style={{ position: 'relative' }}>
                 <h1>Corsi in vendita</h1>
                 <p>Ogni corso ha il prezzo specificato.</p>
                 <div id="cards-container">
                     {
                         cards.map(card => (
-                            <Link to={`/course/${card.id}`} key={card.id} style={{ textDecoration: 'none' }}>
+                            <div key={card.id} style={{ textDecoration: 'none' }}>
                                 <Card className="text-center">
                                     <Card.Header>{card.title}</Card.Header>
                                     <Card.Body>
@@ -90,11 +92,11 @@ function Courses() {
                                         <Card.Text>
                                             {card.text}
                                         </Card.Text>
-                                        <Button variant="primary">Acquista</Button>
+                                        <Button variant="primary" disabled>Acquista</Button>
                                     </Card.Body>
                                     <Card.Footer className="text-muted">{card.footer}</Card.Footer>
                                 </Card>
-                            </Link>
+                            </div>
                         ))
                     }
                 </div>
