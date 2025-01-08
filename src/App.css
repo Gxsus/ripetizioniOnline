@@ -23,6 +23,7 @@
     height: calc(100vh - 10vh); /* Altezza totale meno l'altezza della navbar */
     overflow-y: auto; /* Abilita lo scorrimento verticale */
     padding: 20px;
+    margin-top: 10vh; /* Aggiungi un margine superiore per evitare la sovrapposizione */
 }
 
 .menu {
@@ -69,8 +70,10 @@ table th, table td {
     gap: 2vw; /* Riduci il gap tra gli elementi */
     height: 10vh; /* Aumenta l'altezza della navbar */
     justify-content: left;
-    position: relative;
+    position: fixed; /* Cambia da relative a fixed */
+    top: 0; /* Posiziona la navbar in cima */
     width: 100vw;
+    z-index: 1000; /* Assicurati che la navbar sia sopra gli altri elementi */
 }
 
 #navbar a {
@@ -89,7 +92,8 @@ table th, table td {
 }
 
 #root {
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     text-align: center;
 }
 

@@ -75,7 +75,7 @@ function Courses() {
     return (
         <>
             <Navbar />
-            <div className="banner" style={{ backgroundColor: 'yellow',color: "black", textAlign: 'center', padding: '10px', fontWeight: 'bold' }}>
+            <div className="banner" style={{ backgroundColor: 'yellow', color: "black", textAlign: 'center', padding: '10px', fontWeight: 'bold', marginTop: '10vh' }}>
                 Work in Progress
             </div>
             <div className="container main-content" style={{ position: 'relative' }}>
