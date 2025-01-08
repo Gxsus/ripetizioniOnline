@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./font.ttf') format('truetype');
+}
+
+* {
+    font-family: 'CustomFont', sans-serif;
+}
+
 .burger-menu {
     background: none;
     border: none;
