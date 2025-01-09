@@ -75,10 +75,10 @@ function Courses() {
     return (
         <>
             <Navbar />
-            <div className="banner" style={{ backgroundColor: 'yellow', color: "black", textAlign: 'center', padding: '10px', fontWeight: 'bold', marginTop: '15vh' }}>
+            <div className="banner" style={{ backgroundColor: 'yellow', color: "black", textAlign: 'center', padding: '10px', fontWeight: 'bold', marginTop: '10vh' }}>
                 Work in Progress
             </div>
-            <div className="container main-content" style={{ position: 'relative', paddingTop: '0', marginTop: '3vh' }}>
+            <div className="container main-content" style={{ position: 'relative', marginTop: '0vh' }}>
                 <h1>Corsi in vendita</h1>
                 <p>Ogni corso ha il prezzo specificato.</p>
                 <div id="cards-container">

@@ -36,10 +36,11 @@ html, body {
 }
 
 .main-content {
-    height: calc(100vh - 15vh); /* Imposta l'altezza in base alla viewport */
-    margin-top: 15vh; /* Aggiungi un margine superiore per evitare la sovrapposizione */
+    height: calc(100vh - 10vh); /* Imposta l'altezza in base alla viewport */
+    margin-top: 10vh; /* Aggiungi un margine superiore per evitare la sovrapposizione */
     overflow-y: auto; /* Abilita lo scorrimento verticale */
-    padding: 20px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .menu {
@@ -87,7 +88,6 @@ table th, table td {
     gap: 2vw;
     height: 10vh;
     justify-content: space-between;
-    padding: 15px 30px;
     position: fixed;
     top: 0;
     width: 100vw;
