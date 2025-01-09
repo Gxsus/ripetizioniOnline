@@ -29,10 +29,9 @@
 }
 
 .main-content {
-    height: calc(100vh - 10vh); /* Altezza totale meno l'altezza della navbar */
     overflow-y: auto; /* Abilita lo scorrimento verticale */
     padding: 20px;
-    margin-top: 10vh; /* Aggiungi un margine superiore per evitare la sovrapposizione */
+    margin-top: 15vh; /* Aggiungi un margine superiore per evitare la sovrapposizione */
 }
 
 .menu {
@@ -71,33 +70,44 @@ table th, table td {
     overflow: auto;
 }
 
-#navbar {
+#navbar, .navbar {
     align-items: center;
-    background-color: rgb(26, 26, 26);
+    background: linear-gradient(90deg, #003366, #00509E); /* Gradiente blu */
     display: flex;
-    flex-direction: row;
-    gap: 2vw; /* Riduci il gap tra gli elementi */
-    height: 10vh; /* Aumenta l'altezza della navbar */
-    justify-content: left;
-    position: fixed; /* Cambia da relative a fixed */
-    top: 0; /* Posiziona la navbar in cima */
+    gap: 2vw;
+    height: 10vh;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
     width: 100vw;
-    z-index: 1000; /* Assicurati che la navbar sia sopra gli altri elementi */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra sottile */
+    font-family: 'Open Sans', sans-serif; /* Font moderno */
 }
 
-#navbar a {
-    color: white;
-    font-size: 2.5vh; /* Riduci la dimensione del font */
+#navbar a, .navbar a {
+    color: #FFFFFF; /* Testo bianco */
     margin: 0 15px; /* Aumenta il margine tra i link */
     text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombreggiatura leggera */
 }
 
-#navbar a.active {
+#navbar a.active, .navbar a.active {
     font-weight: 1000;
+    text-decoration: underline; /* Sottolinea il testo */
+    text-underline-offset: 3px; /* Distanza la sottolineatura dal testo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombreggiatura leggera */
 }
 
-#navbar a:hover {
-    color: #393e46;
+#navbar a:hover, .navbar a:hover {
+    color: #00AEEF; /* Cambia in azzurro brillante */
+    font-style: italic; /* Testo in corsivo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombreggiatura leggera */
 }
 
 #root {

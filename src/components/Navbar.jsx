@@ -19,7 +19,7 @@ function Navbar() {
 
     return (
         <nav id="navbar">
-            <button onClick={toggleMenu} className="burger-menu">
+            <button onClick={toggleMenu} className="burger-menu" style={{ color: '#FFFFFF' }}>
                 {isMenuOpen ? '✖' : '☰'}
             </button>
             <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
